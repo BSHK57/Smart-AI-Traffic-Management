@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Maps Route Display</title>
+    <script>
+      let map, directionsService, directionsRenderer;
+      async function init() {
+        await customElements.whenDefined('gmp-map');
+        
+        map = document.querySelector('gmp-map').innerMap;
+        const trafficLayer = new google.maps.TrafficLayer();
+        trafficLayer.setMap(map);
+        
+        directionsService = new google.maps.DirectionsService();
+        directionsRenderer = new google.maps.DirectionsRenderer();
+        directionsRenderer.setMap(map);
+      }
+      
+      async function calculateRoute() {
+    const origin = document.getElementById('origin').value;
+    const destination = document.getElementById('destination').value;
+
+    if (!origin || !destination) {
+        alert("Please enter both origin and destination");
+        return;
+    }
+
+    try {
+        // Ensure this URL matches your Flask backend's actual running port
+        const response = await fetch("http://127.0.0.1:5000/get-routes", {  
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ origin, destination })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            renderRouteOnMap(data);
+        } else {
+            alert("Error fetching route: " + data.error);
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        alert("Zoom out and wait for few seconds.");
+    }
+}
+
+
+function renderRouteOnMap(routeData) {
+    if (!routeData.routes || routeData.routes.length === 0) {
+        alert("No routes found.");
+        return;
+    }
+
+    const route = routeData.routes[0].legs[0]; // Get the first route leg
+    const encodedPolyline = route.polyline.encodedPolyline;
+    const startLatLng = route.startLocation.latLng;
+    if (!startLatLng || !startLatLng.latitude || !startLatLng.longitude) {
+        alert("Invalid start location received.");
+        return;
+    }
+
+    const startPosition = {
+        lat: parseFloat(startLatLng.latitude),
+        lng: parseFloat(startLatLng.longitude)
+    };
+    // Decode the polyline
+    const path = google.maps.geometry.encoding.decodePath(encodedPolyline);
+
+    // Remove existing polylines if any
+    if (window.routePolyline) {
+        window.routePolyline.setMap(null);
+    }
+
+    // Create a new polyline and add it to the map
+    window.routePolyline = new google.maps.Polyline({
+        path: path,
+        geodesic: true,
+        strokeColor: "#FF0000",
+        strokeOpacity: 1.0,
+        strokeWeight: 4
+    });
+
+    window.routePolyline.setMap(map);
+
+    // Center the map around the start location
+    map.setCenter(startLocation);
+    // map.setZoom(14);
+}
+
+
+      
+      document.addEventListener('DOMContentLoaded', init);
+    </script>
+    
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/@googlemaps/extended-component-library/0.6.11/index.min.js">
+    </script>
+    
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+      .controls {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+      }
+      input {
+        padding: 5px;
+        width: 250px;
+      }
+      button {
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+      gmp-map {
+        width: 900px;
+        height: 700px;
+        border: 1px solid #ccc;
+        margin: 20px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <gmpx-api-loader key="AIzaSyBV_OyxA5ClI1363SwQODRxvchzuzm6e7A" solution-channel="GMP_GE_mapsandplacesautocomplete_v2">
+    </gmpx-api-loader>
+    
+    <div class="controls">
+      <input id="origin" type="text" placeholder="Enter origin">
+      <input id="destination" type="text" placeholder="Enter destination">
+      <button onclick="calculateRoute()">Get Route</button>
+    </div>
+    
+    <gmp-map center="14.749933,79.98633" zoom="13" map-id="6afbbe6b4f6738a4"></gmp-map>
+  </body>
+</html>

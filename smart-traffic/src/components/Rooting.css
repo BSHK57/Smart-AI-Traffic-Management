@@ -1,0 +1,66 @@
+.admin-login-btn {
+    background-color: #ff5733;
+    /* Red for Admin */
+  }
+
+  
+  .admin-login-btn,
+{
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .admin-login-btn:hover {
+    background-color: #c0392b;
+  }
+  
+
+  
+  .admin-login-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .admin-login-btn {
+    background-color: #ff5733;
+    /* Red for Admin */
+  }
+  
+
+  
+  .admin-login-btn,
+  .user-login-btn {
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .admin-login-btn:hover {
+    background-color: #c0392b;
+  }
+
+  
+  .back-home-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #1f2326;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .back-home-btn:hover {
+    background-color: #0056b3;
+  }

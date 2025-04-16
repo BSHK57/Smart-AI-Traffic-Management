@@ -1,0 +1,58 @@
+/* Navbar.css */
+.navbar {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff !important;
+    transition: 0.3s;
+}
+
+.navbar-brand:hover {
+    color: #0056b3 !important;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 10px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #333 !important;
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff !important;
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.admin-dropdown .dropdown-menu {
+    right: 0;
+    left: auto;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,402 @@
+[
+    {
+        "latitude": 14.679828274764033,
+        "longitude": 77.57398619724279,
+        "causeType": "Accident",
+        "timestamp": "08/03/2025, 08:58:55"
+    },
+    {
+        "latitude": 40.73539696990842,
+        "longitude": -73.99018406867981,
+        "causeType": "Traffic Monitoring",
+        "timestamp": "08/03/2025, 09:57:34"
+    },
+    {
+        "latitude": 13.04311919555421,
+        "longitude": 77.58968576843067,
+        "causeType": "Traffic Monitoring",
+        "timestamp": "08/03/2025, 09:58:41"
+    },
+    {
+        "latitude": 10.730635877253098,
+        "longitude": 79.01671358624688,
+        "causeType": "Traffic Monitoring",
+        "timestamp": "08/03/2025, 09:59:24"
+    },
+    {
+        "latitude": 10.730765704551198,
+        "longitude": 79.01530726068351,
+        "causeType": "Traffic Monitoring",
+        "timestamp": "08/03/2025, 10:02:14"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "12.3",
+        "longitude": "13.00",
+        "location": "Sri CIty",
+        "timestamp": "08/03/2025, 11:30:14"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "11.00",
+        "longitude": "16.00",
+        "location": "Tirupati",
+        "timestamp": "08/03/2025, 11:35:43"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "18.00",
+        "longitude": "17.00",
+        "location": "Vizag",
+        "timestamp": "08/03/2025, 11:45:28"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "14.00",
+        "longitude": "15.7",
+        "location": "Hyderabad",
+        "timestamp": "08/03/2025, 11:53:37"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "18",
+        "longitude": "19",
+        "location": "Delhi",
+        "timestamp": "08/03/2025, 12:01:15"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "20",
+        "longitude": "30",
+        "location": "Godavari",
+        "timestamp": "08/03/2025, 12:08:57"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "20",
+        "longitude": "35",
+        "location": "Banglore",
+        "timestamp": "08/03/2025, 12:10:43"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "45",
+        "longitude": "87",
+        "location": "Ooty",
+        "timestamp": "08/03/2025, 12:13:04"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "45",
+        "longitude": "87",
+        "location": "Ooty",
+        "timestamp": "08/03/2025, 12:16:34"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "78",
+        "longitude": "18",
+        "location": "Lucknow",
+        "timestamp": "08/03/2025, 12:18:46"
+    },
+    {
+        "latitude": 14.679828274764033,
+        "longitude": 77.57398619724279,
+        "causeType": "Accident",
+        "timestamp": "08/03/2025, 08:58:55"
+    },
+    {
+        "latitude": 40.73539696990842,
+        "longitude": -73.99018406867981,
+        "causeType": "Traffic Monitoring",
+        "timestamp": "08/03/2025, 09:57:34"
+    },
+    {
+        "latitude": 13.04311919555421,
+        "longitude": 77.58968576843067,
+        "causeType": "Traffic Monitoring",
+        "timestamp": "08/03/2025, 09:58:41"
+    },
+    {
+        "latitude": 10.730635877253098,
+        "longitude": 79.01671358624688,
+        "causeType": "Traffic Monitoring",
+        "timestamp": "08/03/2025, 09:59:24"
+    },
+    {
+        "latitude": 10.730765704551198,
+        "longitude": 79.01530726068351,
+        "causeType": "Traffic Monitoring",
+        "timestamp": "08/03/2025, 10:02:14"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "12.3",
+        "longitude": "13.00",
+        "location": "Sri CIty",
+        "timestamp": "08/03/2025, 11:30:14"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "11.00",
+        "longitude": "16.00",
+        "location": "Tirupati",
+        "timestamp": "08/03/2025, 11:35:43"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "18.00",
+        "longitude": "17.00",
+        "location": "Vizag",
+        "timestamp": "08/03/2025, 11:45:28"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "14.00",
+        "longitude": "15.7",
+        "location": "Hyderabad",
+        "timestamp": "08/03/2025, 11:53:37"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "18",
+        "longitude": "19",
+        "location": "Delhi",
+        "timestamp": "08/03/2025, 12:01:15"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "20",
+        "longitude": "30",
+        "location": "Godavari",
+        "timestamp": "08/03/2025, 12:08:57"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "20",
+        "longitude": "35",
+        "location": "Banglore",
+        "timestamp": "08/03/2025, 12:10:43"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "45",
+        "longitude": "87",
+        "location": "Ooty",
+        "timestamp": "08/03/2025, 12:13:04"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "45",
+        "longitude": "87",
+        "location": "Ooty",
+        "timestamp": "08/03/2025, 12:16:34"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "78",
+        "longitude": "18",
+        "location": "Lucknow",
+        "timestamp": "08/03/2025, 12:18:46"
+    },
+    {
+        "latitude": 14.679828274764033,
+        "longitude": 77.57398619724279,
+        "causeType": "Accident",
+        "timestamp": "08/03/2025, 08:58:55"
+    },
+    {
+        "latitude": 40.73539696990842,
+        "longitude": -73.99018406867981,
+        "causeType": "Traffic Monitoring",
+        "timestamp": "08/03/2025, 09:57:34"
+    },
+    {
+        "latitude": 13.04311919555421,
+        "longitude": 77.58968576843067,
+        "causeType": "Traffic Monitoring",
+        "timestamp": "08/03/2025, 09:58:41"
+    },
+    {
+        "latitude": 10.730635877253098,
+        "longitude": 79.01671358624688,
+        "causeType": "Traffic Monitoring",
+        "timestamp": "08/03/2025, 09:59:24"
+    },
+    {
+        "latitude": 10.730765704551198,
+        "longitude": 79.01530726068351,
+        "causeType": "Traffic Monitoring",
+        "timestamp": "08/03/2025, 10:02:14"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "12.3",
+        "longitude": "13.00",
+        "location": "Sri CIty",
+        "timestamp": "08/03/2025, 11:30:14"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "11.00",
+        "longitude": "16.00",
+        "location": "Tirupati",
+        "timestamp": "08/03/2025, 11:35:43"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "18.00",
+        "longitude": "17.00",
+        "location": "Vizag",
+        "timestamp": "08/03/2025, 11:45:28"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "14.00",
+        "longitude": "15.7",
+        "location": "Hyderabad",
+        "timestamp": "08/03/2025, 11:53:37"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "18",
+        "longitude": "19",
+        "location": "Delhi",
+        "timestamp": "08/03/2025, 12:01:15"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "20",
+        "longitude": "30",
+        "location": "Godavari",
+        "timestamp": "08/03/2025, 12:08:57"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "20",
+        "longitude": "35",
+        "location": "Banglore",
+        "timestamp": "08/03/2025, 12:10:43"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "45",
+        "longitude": "87",
+        "location": "Ooty",
+        "timestamp": "08/03/2025, 12:13:04"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "45",
+        "longitude": "87",
+        "location": "Ooty",
+        "timestamp": "08/03/2025, 12:16:34"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "78",
+        "longitude": "18",
+        "location": "Lucknow",
+        "timestamp": "08/03/2025, 12:18:46"
+    },
+    {
+        "latitude": 14.679828274764033,
+        "longitude": 77.57398619724279,
+        "causeType": "Accident",
+        "timestamp": "08/03/2025, 08:58:55"
+    },
+    {
+        "latitude": 40.73539696990842,
+        "longitude": -73.99018406867981,
+        "causeType": "Traffic Monitoring",
+        "timestamp": "08/03/2025, 09:57:34"
+    },
+    {
+        "latitude": 13.04311919555421,
+        "longitude": 77.58968576843067,
+        "causeType": "Traffic Monitoring",
+        "timestamp": "08/03/2025, 09:58:41"
+    },
+    {
+        "latitude": 10.730635877253098,
+        "longitude": 79.01671358624688,
+        "causeType": "Traffic Monitoring",
+        "timestamp": "08/03/2025, 09:59:24"
+    },
+    {
+        "latitude": 10.730765704551198,
+        "longitude": 79.01530726068351,
+        "causeType": "Traffic Monitoring",
+        "timestamp": "08/03/2025, 10:02:14"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "12.3",
+        "longitude": "13.00",
+        "location": "Sri CIty",
+        "timestamp": "08/03/2025, 11:30:14"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "11.00",
+        "longitude": "16.00",
+        "location": "Tirupati",
+        "timestamp": "08/03/2025, 11:35:43"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "18.00",
+        "longitude": "17.00",
+        "location": "Vizag",
+        "timestamp": "08/03/2025, 11:45:28"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "14.00",
+        "longitude": "15.7",
+        "location": "Hyderabad",
+        "timestamp": "08/03/2025, 11:53:37"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "18",
+        "longitude": "19",
+        "location": "Delhi",
+        "timestamp": "08/03/2025, 12:01:15"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "20",
+        "longitude": "30",
+        "location": "Godavari",
+        "timestamp": "08/03/2025, 12:08:57"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "20",
+        "longitude": "35",
+        "location": "Banglore",
+        "timestamp": "08/03/2025, 12:10:43"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "45",
+        "longitude": "87",
+        "location": "Ooty",
+        "timestamp": "08/03/2025, 12:13:04"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "45",
+        "longitude": "87",
+        "location": "Ooty",
+        "timestamp": "08/03/2025, 12:16:34"
+    },
+    {
+        "causeType": "Accident",
+        "latitude": "78",
+        "longitude": "18",
+        "location": "Lucknow",
+        "timestamp": "08/03/2025, 12:18:46"
+    }
+]

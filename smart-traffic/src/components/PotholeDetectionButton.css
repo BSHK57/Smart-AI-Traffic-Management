@@ -1,0 +1,33 @@
+.pothole-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .pothole-container input[type="file"] {
+    margin: 10px 0;
+  }
+  
+  .pothole-container button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .pothole-container button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  .error-message {
+    color: red;
+    font-weight: bold;
+  }
+  
+  h3 {
+    margin-top: 20px;
+  }
+  

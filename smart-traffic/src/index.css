@@ -1,0 +1,20 @@
+body {
+  font-family: Arial, sans-serif;
+  /* background-image: url("https://img.freepik.com/free-photo/aerial-view-traffic-roundabout-highway-night_335224-698.jpg?t=st=1741438507~exp=1741442107~hmac=77b1071c36203e78fa7be33fbc7a63d030f85d39390307cc29dba938ecf01ee8&w=1800"); */
+  /* background-size: cover; */
+}
+
+.container {
+  margin-top: 20px;
+  
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traffic Management Background</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: linear-gradient(to bottom, #1a2a6c, #2a3a7c);
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .road {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+      background-color: #333;
+      overflow: hidden;
+    }
+    
+    .lane-divider {
+      position: absolute;
+      width: 80px;
+      height: 10px;
+      background-color: #fff;
+      top: 45px;
+      /* animation: moveLanes 2s linear infinite; */
+    }
+    
+    @keyframes moveLanes {
+      0% {
+        transform: translateX(100vw);
+      }
+      100% {
+        transform: translateX(-100px);
+      }
+    }
+    
+    .city {
+      position: absolute;
+      bottom: 100px;
+      width: 100%;
+      height: 180px;
+    }
+    
+    .building {
+      position: absolute;
+      bottom: 0;
+      background-color: #222;
+      width: 60px;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+    
+    .window {
+      position: absolute;
+      width: 10px;
+      height: 15px;
+      background-color: rgba(255, 255, 100, 0.8);
+    }
+    
+    /* Street light poles between buildings */
+    .street-pole {
+      position: absolute;
+      width: 4px;
+      background-color: #555;
+      bottom: 0;
+      z-index: 5;
+    }
+    
+    .pole-light {
+      position: absolute;
+      width: 15px;
+      height: 8px;
+      background-color: #FFD700;
+      border-radius: 50%;
+      top: 0;
+      left: -5.5px;
+      box-shadow: 0 0 10px 5px rgba(255, 215, 0, 0.4);
+    }
+    
+    /* Realistic vehicle styles */
+    .car {
+      position: absolute;
+      width: 60px;
+      height: 25px;
+      bottom: 30px;
+      border-radius: 5px 8px 3px 3px;
+      animation: moveCar linear infinite;
+      z-index: 10;
+    }
+    
+    .car-top {
+      position: absolute;
+      width: 40px;
+      height: 15px;
+      background-color: inherit;
+      top: -15px;
+      left: 5px;
+      border-radius: 7px 7px 0 0;
+      opacity: 0.9;
+    }
+    
+    .car-window {
+      position: absolute;
+      background-color: #87CEFA;
+      width: 10px;
+      height: 8px;
+      top: 3px;
+      border-radius: 2px;
+    }
+    
+    .car-window.front {
+      left: 5px;
+    }
+    
+    .car-window.back {
+      right: 5px;
+    }
+    
+    .car-wheel {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #111;
+      border-radius: 50%;
+      bottom: -5px;
+    }
+    
+    .car-wheel.front {
+      left: 10px;
+    }
+    
+    .car-wheel.back {
+      right: 10px;
+    }
+    
+    .car-light {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      top: 10px;
+    }
+    
+    .car-light.front {
+      background-color: #FFF;
+      left: 0;
+      box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.5);
+    }
+    
+    .car-light.back {
+      background-color: #F00;
+      right: 0;
+    }
+    
+    
+    .traffic-light {
+      position: absolute;
+      width: 15px;
+      height: 45px;
+      background-color: #111;
+      bottom: 100px;
+      border-radius: 3px;
+    }
+    
+    /* Traffic light pole style */
+    .traffic-light-pole {
+      position: absolute;
+      width: 6px;
+      height: 100px;
+      background-color: #444;
+      bottom: 0;
+    }
+    
+    .light {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      left: 2.5px;
+    }
+    
+    .red {
+      top: 3px;
+      background-color: #f00;
+    }
+    
+    .yellow {
+      top: 17px;
+      background-color: #ff0;
+    }
+    
+    .green {
+      top: 31px;
+      background-color: #0f0;
+    }
+    
+    /* Realistic cloud style */
+    .cloud {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 50px;
+      animation: moveCloud linear infinite;
+    }
+    
+    @keyframes moveCloud {
+      0% {
+        transform: translateX(100vw);
+      }
+      100% {
+        transform: translateX(-200px);
+      }
+    }
+    
+    .content {
+      position: relative;
+      z-index: 100;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    h1 {
+      margin: 0;
+      font-size: 36px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>Traffic Management System</h1>
+      <h1>User Access</h1>
+
+      <!-- Your actual content will go here -->
+    </div>
+
+    <div class="city" id="city"></div>
+    <div class="road" id="road"></div>
+  </div>
+
+  <script>
+    // Create lane dividers
+    function createLaneDividers() {
+      const road = document.getElementById('road');
+      for (let i = 0; i < 125; i++) {
+        const divider = document.createElement('div');
+        divider.className = 'lane-divider';
+        divider.style.left = (i*150) + 'px';
+        road.appendChild(divider);
+      }
+    }
+    
+    // Create buildings for the city skyline
+    function createBuildings() {
+      const city = document.getElementById('city');
+      let lastPosition = 0;
+      
+      for (let i = 0; i < 15; i++) {
+        const building = document.createElement('div');
+        building.className = 'building';
+        
+        const height = 40 + Math.random() * 140;
+
+        const width = 40 + Math.random() * 60;
+
+        const position = i * (120 * 0.8);
+        
+        building.style.height = height + 'px';
+        building.style.width = width + 'px';
+        building.style.left = position + 'px';
+        
+        // Create windows for buildings
+        const numFloors = Math.floor(height / 20);
+        const numWindowsPerFloor = Math.floor(width / 15);
+        
+        for (let floor = 0; floor < numFloors; floor++) {
+          for (let w = 0; w < numWindowsPerFloor; w++) {
+            if (Math.random() > 0.3) {
+              const windowEl = document.createElement('div');
+              windowEl.className = 'window';
+              windowEl.style.bottom = (floor * 20 + 5) + 'px';
+              windowEl.style.left = (w * 15 + 5) + 'px';
+              windowEl.style.opacity = 0.5 + Math.random() * 0.5;
+              building.appendChild(windowEl);
+            }
+          }
+        }
+        
+        city.appendChild(building);
+        
+        // Add a street light pole between buildings (except before the first building)
+        if (i % 3 == 0  && i>0) {
+          createStreetPole(position );
+        }
+        
+        lastPosition = position + width;
+      }
+    }
+    
+    // Create street light poles
+    function createStreetPole(position) {
+      const container = document.querySelector('.container');
+      const height = 120+40 ;
+      
+      const pole = document.createElement('div');
+      pole.className = 'street-pole';
+      pole.style.height = (height+100) + 'px';
+      pole.style.left = position + 'px';
+      
+      const light = document.createElement('div');
+      light.className = 'pole-light';
+      pole.appendChild(light);
+      
+      container.appendChild(pole);
+    }
+    
+    // Create realistic cars
+    function createCars() {
+      const road = document.getElementById('road');
+      const colors = ['#f00', '#0f0', '#00f', '#ff0', '#f0f', '#0ff', '#555', '#999', '#FFDAB9', '#8A2BE2'];
+      const carTypes = ['sedan', 'suv', 'truck'];
+      
+      for (let i = 0; i < 8; i++) {
+        const carContainer = document.createElement('div');
+        carContainer.className = 'car';
+        
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        const speed = 5 + Math.random() * 15;
+        const delay = Math.random() * 10;
+        const lane = 20 + Math.floor(Math.random() * 2) * 30;
+        const carType = carTypes[Math.floor(Math.random() * carTypes.length)];
+        
+        carContainer.style.backgroundColor = color;
+        carContainer.style.bottom = lane + 'px';
+        carContainer.style.animationDuration = speed + 's';
+        carContainer.style.animationDelay = delay + 's';
+        carContainer.style.left = (Math.random() * window.innerWidth) + 'px';
+        
+        // Add car top/cabin
+        const carTop = document.createElement('div');
+        carTop.className = 'car-top';
+        carTop.style.backgroundColor = color;
+        
+        // Adjust dimensions based on car type
+        if (carType === 'suv') {
+          carContainer.style.height = '30px';
+          carTop.style.height = '18px';
+          carTop.style.width = '45px';
+          carTop.style.left = '7px';
+        } else if (carType === 'truck') {
+          carContainer.style.width = '70px';
+          carContainer.style.height = '30px';
+          carTop.style.width = '25px';
+          carTop.style.left = '5px';
+        }
+        
+        // Add windows to car top
+        const frontWindow = document.createElement('div');
+        frontWindow.className = 'car-window front';
+        carTop.appendChild(frontWindow);
+        
+        const backWindow = document.createElement('div');
+        backWindow.className = 'car-window back';
+        carTop.appendChild(backWindow);
+        
+        // Add wheels
+        const frontWheel = document.createElement('div');
+        frontWheel.className = 'car-wheel front';
+        carContainer.appendChild(frontWheel);
+        
+        const backWheel = document.createElement('div');
+        backWheel.className = 'car-wheel back';
+        carContainer.appendChild(backWheel);
+        
+        // Add lights
+        const frontLight = document.createElement('div');
+        frontLight.className = 'car-light front';
+        carContainer.appendChild(frontLight);
+        
+        const backLight = document.createElement('div');
+        backLight.className = 'car-light back';
+        carContainer.appendChild(backLight);
+        
+        carContainer.appendChild(carTop);
+        road.appendChild(carContainer);
+      }
+    }
+    
+    // Create traffic lights with poles
+    function createTrafficLights() {
+      const container = document.querySelector('.container');
+      
+      for (let i = 0; i < 3; i++) {
+        const xPosition = 300 + i * 500;
+        
+        // Create the pole first
+        const pole = document.createElement('div');
+        pole.className = 'traffic-light-pole';
+        pole.style.left = (xPosition+4 ) + 'px'; // Center the pole under the traffic light
+        container.appendChild(pole);
+        pole.style.top="71%" ;
+        // Create the traffic light on top of the pole
+        const trafficLight = document.createElement('div');
+        trafficLight.className = 'traffic-light';
+        trafficLight.style.left = xPosition + 'px';
+        trafficLight.style.top = "65%";
+        
+        const redLight = document.createElement('div');
+        redLight.className = 'light red';
+        
+        const yellowLight = document.createElement('div');
+        yellowLight.className = 'light yellow';
+        yellowLight.style.opacity = '0.3';
+        
+        const greenLight = document.createElement('div');
+        greenLight.className = 'light green';
+        greenLight.style.opacity = '0.3';
+        
+        trafficLight.appendChild(redLight);
+        trafficLight.appendChild(yellowLight);
+        trafficLight.appendChild(greenLight);
+        
+        container.appendChild(trafficLight);
+        
+        // Animate traffic light
+        animateTrafficLight(redLight, yellowLight, greenLight);
+      }
+    }
+    
+    // Traffic light animation
+    function animateTrafficLight(red, yellow, green) {
+      setInterval(() => {
+        // Red
+        red.style.opacity = '1';
+        yellow.style.opacity = '0.3';
+        green.style.opacity = '0.3';
+        
+        setTimeout(() => {
+          // Red + Yellow
+          red.style.opacity = '1';
+          yellow.style.opacity = '1';
+          green.style.opacity = '0.3';
+          
+          setTimeout(() => {
+            // Green
+            red.style.opacity = '0.3';
+            yellow.style.opacity = '0.3';
+            green.style.opacity = '1';
+            
+            setTimeout(() => {
+              // Yellow
+              red.style.opacity = '0.3';
+              yellow.style.opacity = '1';
+              green.style.opacity = '0.3';
+            }, 3000);
+          }, 1000);
+        }, 5000);
+      }, 10000);
+    }
+    
+    // Create realistic clouds
+    function createClouds() {
+      const container = document.querySelector('.container');
+      
+      for (let i = 0; i < 5; i++) {
+        const cloud = document.createElement('div');
+        cloud.className = 'cloud';
+        
+        const width = 80 + Math.random() * 120;
+        const height = width * 0.6;
+        const top = 50 + Math.random() * 100;
+        const speed = 30 + Math.random() * 70;
+        const delay = Math.random() * 30;
+        
+        cloud.style.width = width + 'px';
+        cloud.style.height = height + 'px';
+        cloud.style.top = top + 'px';
+        cloud.style.animationDuration = speed + 's';
+        cloud.style.animationDelay = delay + 's';
+        cloud.style.opacity = 0.5 + Math.random() * 0.3;
+        
+        container.appendChild(cloud);
+      }
+    }
+    
+    // Animation for cars
+    document.styleSheets[0].insertRule(`
+      @keyframes moveCar {
+        0% {
+          transform: translateX(100vw);
+        }
+        100% {
+          transform: translateX(-100px);
+        }
+      }
+    `, document.styleSheets[0].cssRules.length);
+    
+    window.onload = function() {
+
+      createLaneDividers();
+      createBuildings();
+      createCars();
+      createTrafficLights();
+      createClouds();
+    };
+  </script>
+</body>
+</html>

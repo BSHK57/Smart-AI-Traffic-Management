@@ -1,0 +1,127 @@
+/* 🚀 UserReports.css - Fully Optimized with Background Color */
+
+/* Background with Modern Gradient */
+.user-reports-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #003366, #001a33);
+  padding: 20px;
+  width:auto;
+}
+.tct{
+  color:red ;
+}
+/* Card Styling with Background */
+.user-reports-card {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.95); /* White with slight transparency */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+  backdrop-filter: blur(10px);
+  width:auto;
+}
+
+/* Adding a Soft Blue Background */
+.user-reports-card {
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.1), rgba(0, 47, 122, 0.2));
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  width:auto;
+}
+
+/* Title Styling */
+h2 {
+  font-size: 26px;
+  color: #222;
+  font-weight: bold;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Info Text */
+.info-text {
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* Textarea Styling */
+.report-textarea {
+  width: 100%;
+  height: 140px;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  transition: 0.3s ease-in-out;
+  box-shadow: inset 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.report-textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.4);
+  outline: none;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #007bff, #0047ab);
+  color: white;
+  border: none;
+  padding: 12px;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.submit-btn:disabled {
+  background-color: #bbb;
+  cursor: not-allowed;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #0056b3, #002a80);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .user-reports-card {
+    padding: 25px;
+  }
+
+  .report-textarea {
+    font-size: 15px;
+  }
+}

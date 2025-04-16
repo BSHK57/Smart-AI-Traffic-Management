@@ -1,0 +1,78 @@
+/* UserManagement.css */
+.user-management-container {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #333;
+}
+
+/* Add User Form */
+.add-user-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-user-form input,
+.add-user-form select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.add-user-form .add-btn {
+  background: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.add-user-form .add-btn:hover {
+  background: #218838;
+}
+
+/* Table */
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.users-table th,
+.users-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.users-table th {
+  background: #007bff;
+  color: white;
+}
+
+.users-table .delete-btn {
+  background: #dc3545;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.users-table .delete-btn:hover {
+  background: #c82333;
+}
+
+.no-users {
+  color: #777;
+  font-size: 18px;
+}

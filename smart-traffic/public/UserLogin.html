@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <link rel="stylesheet" href="UserLogin.css">
+</head>
+<body>
+    <object data="Background copy.html" type="text/html" class="background" 
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
+    </object>
+
+    <div class="container">
+        <form class="form-container" onsubmit="validateLogin(event)">
+            <label class="form-row">
+                <input type="email" id="email" name="email" placeholder="E-mail" required>
+            </label>
+            <label class="form-row">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </label>
+        
+            <label class="form-row">
+                <input type="checkbox" id="remember-me" name="remember-me">
+                Remember Me
+            </label>
+
+            <div class="form-row">
+                <input type="submit" value="Login">
+            </div>
+
+            <p id="error-message" style="color: red; display: none;">Invalid email or password</p>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const savedEmail = localStorage.getItem("rememberedEmail");
+            const savedPassword = localStorage.getItem("rememberedPassword");
+    
+            if (savedEmail && savedPassword) {
+                document.getElementById("email").value = savedEmail;
+                document.getElementById("password").value = savedPassword;
+                document.getElementById("remember-me").checked = true;
+            }
+        });
+    
+        function validateLogin(event) {
+            event.preventDefault();
+    
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const rememberMe = document.getElementById("remember-me").checked;
+    
+            // Retrieve stored users from localStorage
+            const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
+    
+            // Check if the user exists and password matches
+            const user = storedUsers.find(user => user.email === email && user.password === password);
+    
+            if (user) {
+                alert(`Login successful! Welcome, ${user.name}`);
+                localStorage.setItem("loggedInUser", JSON.stringify(user));
+    
+                // Remember Me Feature
+                if (rememberMe) {
+                    localStorage.setItem("rememberedEmail", email);
+                    localStorage.setItem("rememberedPassword", password);
+                } else {
+                    localStorage.removeItem("rememberedEmail");
+                    localStorage.removeItem("rememberedPassword");
+                }
+    
+                // Redirect based on role
+                if (user.role === "Admin") {
+                    window.location.href = "/admin-dashboard.html";
+                } else {
+                    window.location.href = "/user-dashboard.html";
+                }
+            } else {
+                document.getElementById("error-message").style.display = "block";
+            }
+        }
+    </script>
+    
+</body>
+</html>

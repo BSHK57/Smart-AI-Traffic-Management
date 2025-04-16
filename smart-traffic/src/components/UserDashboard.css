@@ -1,0 +1,107 @@
+/* Dashboard.css */
+.container {
+    text-align: center;
+    margin-top: 50px;
+    width:auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    display: block;
+    width: 220px;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styles */
+.live-traffic-btn {
+    background: #17a2b8;
+    color: white;
+    border: 2px solid #17a2b8;
+}
+
+.live-traffic-btn:hover {
+    background: white;
+    color: #17a2b8;
+}
+
+.routing-btn {
+    background: #343a40;
+    color: white;
+    border: 2px solid #343a40;
+}
+
+.routing-btn:hover {
+    background: white;
+    color: #343a40;
+}
+
+.chatbot-btn {
+    background: #ffc107;
+    color: black;
+    border: 2px solid #ffc107;
+}
+
+.chatbot-btn:hover {
+    background: white;
+    color: #ffc107;
+}
+
+.drowsiness-monitoring-btn {
+    background: #6c757d;
+    color: white;
+    border: 2px solid #6c757d;
+}
+
+.drowsiness-monitoring-btn:hover {
+    background: white;
+    color: #6c757d;
+}
+
+.reports-btn {
+    background: #dc3545;
+    color: white;
+    border: 2px solid #dc3545;
+}
+
+.reports-btn:hover {
+    background: white;
+    color: #dc3545;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 80%;
+        max-width: 300px;
+    }
+}
