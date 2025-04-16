@@ -1,7 +1,15 @@
 # Smart-AI-Traffic-Management
 
 ### 🏆 1st Place – AI Hackathon 2025, SASTRA University
+## TO USE:
 
+You need google maps api
+and should be added in 3 files:
+1. smart-traffic/public/rooting.html
+2. smart-traffic/public/maps.html
+3. backend/app.py
+
+---
 ## 📌Overview
 
 **AI for Smart Cities** is an intelligent system built to enhance urban living by utilizing Artificial Intelligence to solve real-world challenges faced in city environments. Our solution focuses on optimizing traffic management, improving public safety, and enabling data-driven decision-making through real-time analytics.
