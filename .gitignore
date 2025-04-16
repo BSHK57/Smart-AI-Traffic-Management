@@ -9,3 +9,4 @@ backend/smarttrafficroadsafety-8bdb2-firebase-adminsdk-fbsvc-6c9bdfc767.json
 smart-traffic/.env
 smart-traffic/.firebaserc
 smart-traffic/firebase.json
+smart-traffic/build
