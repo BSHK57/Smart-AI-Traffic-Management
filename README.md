@@ -66,9 +66,9 @@ This project was developed as part of the AI Hackathon 2025 conducted at SASTRA 
 
 ---
 
-## 🤝 Team
+## 🤝 Team Members
 
-- [R Yashwanth](https://www.linkedin.com/in/ryashwanth/) (Team Lead)
+- [R Yashwanth](https://www.linkedin.com/in/ryashwanth/) (**Team Lead**)
 - [Biyyapu Sai Hari Krishna](https://www.linkedin.com/in/bshk2005/) (ME)
 - [Dasari Karthikeya](https://www.linkedin.com/in/karthikeyad/)
 - [Paturi Lohit](https://www.linkedin.com/in/paturi-lohit-82b83a31a/)
