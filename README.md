@@ -13,7 +13,6 @@ and should be added in 3 files:
 ## 📌Overview
 
 **AI for Smart Cities** is an intelligent system built to enhance urban living by utilizing Artificial Intelligence to solve real-world challenges faced in city environments. Our solution focuses on optimizing traffic management, improving public safety, and enabling data-driven decision-making through real-time analytics.
-
 This project was developed as part of the AI Hackathon 2025 conducted at SASTRA University and secured **1st place** among several innovative entries.
 
 ---
