@@ -65,7 +65,6 @@ This project was developed as part of the AI Hackathon 2025 conducted at SASTRA 
 - Enable citizen feedback module for **real-time issue reporting**.
 
 ---
-
 ## 🤝 Team Members
 
 - [R Yashwanth](https://www.linkedin.com/in/ryashwanth/) (**Team Lead**)
